@@ -29,7 +29,7 @@ def get_stages(profile, docker_image) {
                             stage("Create package") {                                
                                 sh "conan graph lock . --profile ${profile} --lockfile=lockfile.lock -r ${conan_develop_repo}"
                                 sh "cat lockfile.lock"
-                                sh "conan create . ${user_channel} --profile ${profile} --lockfile=lockfile.lock -r ${conan_develop_repo} --ignore-dirty"
+                                sh "conan create . --profile ${profile} --lockfile=lockfile.lock -r ${conan_develop_repo} --ignore-dirty"
                                 sh "cat lockfile.lock"
                             }
                         }
