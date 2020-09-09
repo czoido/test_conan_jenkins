@@ -4,8 +4,8 @@ conan_develop_repo = "conan-develop"
 conan_tmp_repo = "conan-tmp"
 
 def profiles = [
-  "debug-gcc6": "conanio/gcc6",	
-  "release-gcc6": "conanio/gcc6"	
+  "default": "conanio/gcc6",	
+  "default": "conanio/gcc6"	
 ]
 
 def get_stages(profile, docker_image) {
